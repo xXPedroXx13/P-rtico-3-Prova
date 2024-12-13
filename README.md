@@ -1,46 +1,66 @@
-### Requisitos
-1. *Instalar o Python*:
-   - Acesse [Python.org](https://www.python.org/downloads/) e baixe a versão mais recente.
-   - Durante a instalação, marque a opção "Add Python to PATH".
+Funcionalidades
 
-2. *Instalar dependências do projeto*:
-   - Abra o terminal ou prompt de comando.
-   - Execute o seguinte comando para instalar as bibliotecas necessárias:
-     bash
-     pip install pandas numpy fpdf
-     
+- *Criação de Modelo de Dados em Excel*: Um modelo de entrada para informações estruturais.
+- *Análise Estrutural*: Determinação de deslocamentos, reações e esforços nos elementos estruturais.
+- *Geração de Relatório em PDF*: Resultados consolidados em um relatório técnico.
 
-3. *Obter o código e os arquivos do projeto*:
-   - Certifique-se de ter os arquivos do projeto em uma pasta no seu computador. 
-   - Verifique se o arquivo dados_portico.xlsx existe ou será gerado pelo script.
+---
 
-### Instruções para Rodar o Projeto
-1. *Abrir o terminal*:
-   - Navegue até a pasta onde os arquivos do projeto estão salvos. Por exemplo:
-     bash
-     cd caminho/para/sua/pasta
-     
+## 📋 Pré-requisitos
 
-2. *Executar o script para gerar o modelo de dados (opcional)*:
-   - Se você não tiver o arquivo dados_portico.xlsx, rode o seguinte comando para criar o modelo:
-     bash
-     python nome_do_script.py
-     
-   - Substitua nome_do_script.py pelo nome do arquivo Python que contém a função generate_excel_template.
+1. *Python*: Baixe e instale a versão mais recente [aqui](https://www.python.org/downloads/).
+   - Certifique-se de marcar a opção *"Add Python to PATH"* durante a instalação.
+2. *Instalar Dependências*:
+   Execute o seguinte comando no terminal para instalar as bibliotecas necessárias:
+   ```bash
+   pip install pandas numpy fpdf
 
-3. *Preencher o arquivo Excel*:
-   - Abra o arquivo dados_portico.xlsx gerado.
-   - Insira os dados estruturais nas planilhas correspondentes:
-     - *Nós*: Coordenadas dos pontos.
-     - *Elementos*: Informações dos elementos estruturais.
-     - *Cargas_Nodais*: Forças aplicadas nos nós.
-     - *Apoios*: Restrições de movimento nos nós.
+🚀 Como Rodar o Projeto
+1. Clone o Repositório:
+git clone https://github.com/usuario/repo.git
+2. cd repo
+3. 
+4. Gerar Modelo de Dados em Excel (opcional): Se você não possui o arquivo dados_portico.xlsx, execute o script para gerar o modelo:
+python nome_do_script.py
+5. 
+6. Preencha o Arquivo Excel:
+    * Nos: Adicione os identificadores e coordenadas dos nós.
+    * Elementos: Insira as propriedades dos elementos estruturais.
+    * Cargas_Nodais: Inclua as cargas aplicadas nos nós.
+    * Apoios: Defina as restrições de movimento dos nós.
+7. Execute o Script: Após preencher o arquivo Excel, rode o script principal:
+python nome_do_script.py
+8. 
+9. Verifique o Relatório Gerado: O relatório será salvo no arquivo resultados_analise.pdf.
 
-4. *Executar a análise*:
-   - Após preencher o arquivo Excel, execute o script principal com:
-     bash
-     python app.py
-     
+🛠️ Como o Código Funciona
+1. Geração do Modelo de Dados
+O código inclui uma função generate_excel_template que cria um modelo Excel (dados_portico.xlsx) com as seguintes planilhas:
+* Nos: Coordenadas dos pontos estruturais.
+* Elementos: Propriedades e conexões dos elementos.
+* Cargas_Nodais: Forças aplicadas nos nós.
+* Apoios: Restrições nos nós.
+2. Análise Estrutural
+A função principal realiza os seguintes passos:
+* Matrizes de Rigidez: Calcula as matrizes locais e globais para cada elemento.
+* Vetor de Forças: Determina as forças nodais equivalentes de acordo com as cargas.
+* Resolução de Sistema Linear: Resolve os deslocamentos globais e calcula as reações nos apoios.
+3. Esforços Locais
+Com base nos deslocamentos globais, o script calcula os esforços internos em cada elemento estrutural.
+4. Geração do Relatório
+Um relatório detalhado é gerado em PDF com as seguintes informações:
+* Matrizes de rigidez.
+* Deslocamentos globais.
+* Reações nos apoios.
+* Esforços locais nos elementos.
+
+📄 Estrutura do Projeto
+* dados_portico.xlsx: Arquivo Excel com os dados de entrada.
+* resultados_analise.pdf: Relatório gerado após a análise.
+* nome_do_script.py: Código principal do projeto.
+
+📞 Suporte
+Caso encontre algum problema, sinta-se à vontade para abrir uma issue.
 
 5. *Verificar os resultados*:
    - O script gerará um arquivo chamado resultados_analise.pdf com os resultados da análise estrutural.

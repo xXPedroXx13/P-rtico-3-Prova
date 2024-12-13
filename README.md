@@ -17,11 +17,11 @@ Funcionalidades
 
 🚀 Como Rodar o Projeto
 1. Clone o Repositório:
-git clone https://github.com/usuario/repo.git
+git clone [https://github.com/usuario/repo.git](https://github.com/xXPedroXx13/Portico-3a-Prova.git)
 2. cd repo
 3. 
 4. Gerar Modelo de Dados em Excel (opcional): Se você não possui o arquivo dados_portico.xlsx, execute o script para gerar o modelo:
-python nome_do_script.py
+python app.py
 5. 
 6. Preencha o Arquivo Excel:
     * Nos: Adicione os identificadores e coordenadas dos nós.

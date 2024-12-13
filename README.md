@@ -19,10 +19,10 @@ Funcionalidades
 1. Clone o Repositório:
 git clone [https://github.com/usuario/repo.git](https://github.com/xXPedroXx13/Portico-3a-Prova.git)
 2. cd repo
-3. 
+   
 4. Gerar Modelo de Dados em Excel (opcional): Se você não possui o arquivo dados_portico.xlsx, execute o script para gerar o modelo:
 python app.py
-5. 
+ 
 6. Preencha o Arquivo Excel:
     * Nos: Adicione os identificadores e coordenadas dos nós.
     * Elementos: Insira as propriedades dos elementos estruturais.
@@ -30,7 +30,7 @@ python app.py
     * Apoios: Defina as restrições de movimento dos nós.
 7. Execute o Script: Após preencher o arquivo Excel, rode o script principal:
 python nome_do_script.py
-8. 
+ 
 9. Verifique o Relatório Gerado: O relatório será salvo no arquivo resultados_analise.pdf.
 
 🛠️ Como o Código Funciona

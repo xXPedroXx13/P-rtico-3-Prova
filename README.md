@@ -39,7 +39,7 @@
 4. *Executar a análise*:
    - Após preencher o arquivo Excel, execute o script principal com:
      bash
-     python nome_do_script.py
+     python app.py
      
 
 5. *Verificar os resultados*:
